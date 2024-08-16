@@ -1,4 +1,5 @@
 video demo: https://drive.google.com/file/d/1K5pp6upukN46HNqWGREccAoDrRRLF82V/view?usp=drive_link
+
 apk link: https://drive.google.com/file/d/1OnmRBnA7PvMWIBfqvWJ9TrkTO-Rbuu38/view?usp=drive_link
 
 Points to Consider:
@@ -16,12 +17,16 @@ Points to Consider:
 
 
 Libraries used:
+
 i. retrofit -> for apis
+
 ii. MPAndroidChart -> for graphs
+
 iii. coroutines -> for background tasks
+
 iv. glide -> for loading images in the UI
 
-Followed the DRY principle as much as could but if layout files are made in a rush so, there are very few cases where
+Followed the DRY principle as much as could but a few layout files are made in a rush so, there are very few cases where
 it is not followed.
 
 Any Feedback or points to improve are completly appreciated. Do let me know so I can make thy art better.
