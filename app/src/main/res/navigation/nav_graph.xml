@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment2">
+    <fragment
+        android:id="@+id/dashboardFragment2"
+        android:name="com.practice.openinapp.fragments.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment2_to_linksFragment3"
+            app:destination="@id/linksFragment3" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_newExpandingFragment2"
+            app:destination="@id/newExpandingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/linksFragment3"
+        android:name="com.practice.openinapp.fragments.dashboard.links.LinksFragment"
+        android:label="fragment_links"
+        tools:layout="@layout/fragment_links" >
+        <action
+            android:id="@+id/action_linksFragment3_to_settingsFragment4"
+            app:destination="@id/settingsFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/newExpandingFragment2"
+        android:name="com.practice.openinapp.fragments.dashboard.others.NewExpandingFragment"
+        android:label="fragment_new_expanding"
+        tools:layout="@layout/fragment_new_expanding" />
+    <fragment
+        android:id="@+id/settingsFragment4"
+        android:name="com.practice.openinapp.fragments.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

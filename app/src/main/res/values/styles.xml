@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CommonDashboardLinearLayout">
+        <item name="android:background">@color/blue</item>
+        <item name="android:paddingStart">@dimen/padding_layout_normal</item>
+        <item name="android:paddingEnd">@dimen/padding_layout_normal</item>
+        <item name="android:paddingTop">@dimen/padding_layout_large</item>
+        <item name="android:paddingBottom">@dimen/padding_layout_large</item>
+    </style>
+
+</resources>

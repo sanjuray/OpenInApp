@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp"
+        android:layout_marginTop="@dimen/padding_layout_normal"
+        android:layout_marginBottom="@dimen/padding_layout_normal"
+        android:layout_marginHorizontal="@dimen/padding_element_normal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_layout_normal">
+
+                <ImageView
+                    android:id="@+id/ivLinkVendorImageView"
+                    android:src="@drawable/amazon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/llLinkDescriptionLinearLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_layout_normal"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLinkVendorImageView"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/ivLinkVendorImageView"
+                    app:layout_constraintTop_toTopOf="@id/ivLinkVendorImageView"
+                    app:layout_constraintVertical_bias="0.545">
+
+                    <TextView
+                        android:id="@+id/tvLinkNameTextView"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_element_normal"
+                        android:ellipsize="end"
+                        android:maxEms="2"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_extra_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLinkDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_extra_small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_element_normal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/llLinkDescriptionLinearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/llLinkDescriptionLinearLayout">
+
+                    <TextView
+                        android:id="@+id/tvClickCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_element_normal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_extra_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvClicksTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clicks"
+                        android:textSize="@dimen/text_size_extra_small" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/blue_dotted_border">
+
+                <TextView
+                    android:id="@+id/tvLinkURL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_size_small"
+                    android:padding="@dimen/padding_layout_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:drawableRight="@drawable/files_copy"
+                    android:background="@color/light_blue"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

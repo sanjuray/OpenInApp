@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.dashboard.DashboardFragment">
+
+        <FrameLayout
+            android:id="@+id/flContainerForNavFragmentsFragmentHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/babQuickNavigationBottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:fabAnchorMode="embed">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bnvQuickNavigationBottomNavigationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelVisibilityMode="labeled"
+                android:layout_marginEnd="20dp"
+                android:paddingBottom="@dimen/padding_layout_normal"
+                android:background="@color/transparent"
+                app:menu="@menu/bottom_navigation_menu"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNavigationAddFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:backgroundTint="@color/blue"
+            app:layout_anchor="@id/babQuickNavigationBottomAppBar"
+            app:maxImageSize="20dp"
+            app:tint="@color/white"
+            android:layout_marginBottom="16dp"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_layout_normal"
+        android:clipToPadding="false"
+        tools:context=".fragments.dashboard.links.LinksFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llNavbarLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CommonDashboardLinearLayout"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDashboardTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_text"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_normal"/>
+
+                <ImageButton
+                    android:id="@+id/ibSettingsImageButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_settings_icon"
+                    android:contentDescription="@string/settings_icon_description"
+                    android:background="@drawable/transparent_background"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llUserGreetingsLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreetingsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_small"
+                        android:padding="@dimen/padding_element_normal"/>
+
+                    <TextView
+                        android:id="@+id/tvUserNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold"
+                        android:drawablePadding="10dp"
+                        android:padding="@dimen/padding_element_normal"
+                        android:drawableEnd="@drawable/hand_wave" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOverviewGraphLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corner_background"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="@dimen/padding_layout_normal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlGraphHeaderRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvOverviewTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Overview"
+                            android:layout_margin="@dimen/padding_element_normal"
+                            android:textSize="@dimen/text_size_extra_small"
+                            android:padding="@dimen/padding_element_normal"/>
+
+                        <LinearLayout
+                            android:id="@+id/llDurationSelectorLinearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:background="@drawable/button_background"
+                            android:padding="@dimen/padding_element_normal"
+                            android:layout_alignParentEnd="true">
+
+                            <TextView
+                                android:id="@+id/tvdurationIndicatorTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_element_large"
+
+                                android:textColor="@color/black"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/text_size_extra_small"
+                                android:textStyle="bold"
+                                android:background="@color/white"
+                                android:drawableRight="@drawable/ic_clock"
+                                android:drawablePadding="10dp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lcOverviewLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStatsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_layout_normal"/>
+
+                <LinearLayout
+                    android:id="@+id/llViewAnalyticsLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/button_background"
+                    android:padding="@dimen/padding_element_normal"
+                    android:layout_marginTop="@dimen/padding_layout_normal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_element_large"
+                        android:text="View Analytics"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_small"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/price_boost"
+                        android:drawablePadding="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLinksSectionLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/padding_layout_normal">
+
+                    <LinearLayout
+                        android:id="@+id/llLinksTabLayoutLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tlLinksTabLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background_color"
+                            app:tabMode="fixed"
+                            app:tabIndicatorGravity="stretch"
+                            app:tabIndicatorAnimationMode="elastic"
+                            app:tabSelectedTextAppearance="@color/white"
+                            app:tabSelectedTextColor="@color/white"
+                            app:tabIndicatorColor="@color/blue"
+                            app:tabIndicator="@drawable/custom_tab_layout"
+                            android:layout_weight="1"/>
+
+                        <ImageButton
+                            android:id="@+id/ibSearchImageButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_search"
+                            android:layout_marginLeft="@dimen/padding_element_normal"
+                            android:contentDescription="@string/settings_icon_description"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:background="@drawable/button_background"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLinksRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="100dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llViewAllLinksLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/button_background"
+                        android:padding="@dimen/padding_element_normal"
+                        android:layout_marginTop="@dimen/padding_layout_normal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_element_large"
+                            android:text="View all Links"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_small"
+                            android:textStyle="bold"
+                            android:drawableLeft="@drawable/link"
+                            android:drawablePadding="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFooterLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clipToPadding="false"
+                    android:paddingBottom="70dp"
+                    android:layout_marginTop="@dimen/padding_layout_large">
+
+                    <LinearLayout
+                        android:id="@+id/llContactLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_green"
+                        android:padding="@dimen/padding_element_large"
+                        android:layout_marginTop="@dimen/padding_layout_normal"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_element_large"
+                            android:text="Talk with us"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_small"
+                            android:textStyle="bold"
+                            android:drawableLeft="@drawable/whatsapp"
+                            android:drawablePadding="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:id="@+id/llFAQLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_blue"
+                        android:padding="@dimen/padding_element_large"
+                        android:layout_marginTop="@dimen/padding_layout_normal"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_element_large"
+                            android:text="Frequently Asked Questions"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_small"
+                            android:textStyle="bold"
+                            android:drawableLeft="@drawable/question_mark"
+                            android:drawablePadding="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
