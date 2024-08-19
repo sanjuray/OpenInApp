@@ -172,18 +172,22 @@ class LinksFragment :
             }
 
             binding.llDurationSelectorLinearLayout.setOnClickListener {
-                CommonObjects.showDurationSelectionDialog(
-                    requireContext(),
-                    "Select Duration",
-                    viewModel.getXValues(),
-                    viewModel.getFromDuration(),
-                    viewModel.getToDuration(),
-                    "Confirm",
-                    "Cancel",
-                ) { from, to ->
-                    viewModel.setFromDuration(from)
-                    viewModel.setToDuration(to)
-                    initLineChart()
+                if(viewModel.getFromDuration() != viewModel.getToDuration()){
+                    CommonObjects.showDurationSelectionDialog(
+                        requireContext(),
+                        "Select Duration",
+                        viewModel.getXValues(),
+                        viewModel.getFromDuration(),
+                        viewModel.getToDuration(),
+                        "Confirm",
+                        "Cancel",
+                    ) { from, to ->
+                        viewModel.setFromDuration(from)
+                        viewModel.setToDuration(to)
+                        initLineChart()
+                    }
+                }else{
+                    binding.tvdurationIndicatorTextView.text = "N/A"
                 }
             }
 
