@@ -1,6 +1,6 @@
 video demo: https://drive.google.com/file/d/1K5pp6upukN46HNqWGREccAoDrRRLF82V/view?usp=drive_link
 
-apk link: https://drive.google.com/file/d/1OnmRBnA7PvMWIBfqvWJ9TrkTO-Rbuu38/view?usp=drive_link
+apk link: https://drive.google.com/file/d/11lFcixc4TpQiTdsahE5MnLAyLvBReodI/view?usp=drive_link
 
 Points to Consider:
 1. Used Kotlin for the Application
