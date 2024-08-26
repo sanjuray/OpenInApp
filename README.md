@@ -12,8 +12,6 @@ Points to Consider:
 6. baseviewmodel  is also used, although it's  potential is not being used
 7. tried to replicate the figma ui as much as possible
 8. clean code and architecture alias "best practices" are followed to the best of my knowledge
-9. the fragments for which the figma sketch is not provided will only show a textView in a different file, haven't felt the
-   need to make it complicated.
 
 
 Libraries used:
